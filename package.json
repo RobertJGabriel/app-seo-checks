@@ -1,24 +1,55 @@
 {
-  "name": "app-seo-checks",
+  "name": "app-searching",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Node module for sorting data though different algorithms",
+  "homepage": "",
+  "author": {
+    "name": "Robert James Gabriel",
+    "email": "robert_gabriel@outlook.com",
+    "url": "https://www.robertgabriel.ninja"
+  },
+  "files": ["lib"],
+  "main": "lib/index.js",
+  "keywords": ["algorithms", "sorting"],
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-xo": "^0.20.1",
+    "husky": "^0.14.3",
+    "jest": "^22.0.6",
+    "lint-staged": "^6.1.1",
+    "nsp": "^2.8.0",
+    "prettier": "1.11.1",
+    "node-fetch": "*"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/checker.js"
+    "prepublishOnly": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RobertJGabriel/app-seo-checks.git"
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RobertJGabriel/app-seo-checks/issues"
+  "eslintConfig": {
+    "extends": ["xo"],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {}
   },
-  "homepage": "https://github.com/RobertJGabriel/app-seo-checks#readme",
+  "repository": "https://github.com/RobertJGabriel/simple-sorting.git",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "Apache-2.0",
   "dependencies": {
-    "caniuse-db": "^1.0.30000815",
+    "caniuse-db": "^1.0.30000824",
     "chalk": "^2.3.2",
     "fs": "0.0.1-security",
     "puppeteer": "^1.2.0"

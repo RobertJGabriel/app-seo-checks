@@ -1,0 +1,15 @@
+{
+  "generator-nm": {
+    "promptValues": {
+      "githubUsername": "robertjgabriel",
+      "website": "https://robertgabriel.ninja"
+    }
+  },
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Robert James Gabriel",
+      "authorEmail": "robert_gabriel@outlook.com",
+      "authorUrl": "https://www.robertgabriel.ninja"
+    }
+  }
+}
