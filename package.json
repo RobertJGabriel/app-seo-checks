@@ -33,7 +33,6 @@
  },
  "scripts": {
   "prepublishOnly": "nsp check",
-  //"precommit": "lint-staged",
   "test": "jest",
   "start": "node lib/example"
  },
