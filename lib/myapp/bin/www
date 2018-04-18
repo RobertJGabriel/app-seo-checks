@@ -12,7 +12,10 @@ var server = http.createServer(app);
  * Get port from environment and store in Express.
  */
 function start() {
-	var port = normalizePort(process.env.PORT || '3000');
+
+
+ var port = process.env.PORT || 8080;
+ const host = process.env.APP_HOST || '127.0.0.1';
 app.set('port', port);
 
 /**
