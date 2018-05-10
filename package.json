@@ -23,7 +23,7 @@
  "scripts": {
   "prepublishOnly": "nsp check",
   "test": "jest",
-  "start": "node lib/example"
+  "start": "node lib/production"
  },
  "lint-staged": {
   "*.js": [

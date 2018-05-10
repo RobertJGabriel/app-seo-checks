@@ -1,1 +1,1 @@
-web: node lib/example.js
+web: node lib/production.js
